@@ -1,0 +1,2 @@
+# ski-resort
+Team project
