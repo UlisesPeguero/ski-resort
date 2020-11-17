@@ -12,10 +12,10 @@
 
   <!-- Bootstrap core CSS -->
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
-
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-
+  <!-- Custom for calendar -->
+  <link href="vendor/monthly/css/monthly.css" rel="stylesheet">
 </head>
 
 <body>
@@ -78,149 +78,225 @@
   </header>
 
   <!-- Page Content -->
-  <div class="container">
+  <div class="container mt-lg-4 mt-2">
 
-    <h1 class="my-4">Welcome to Modern Business</h1>
-
-    <!-- Marketing Icons Section -->
+    <!-- Weather and info -->
     <div class="row">
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis ipsam eos, nam perspiciatis natus commodi similique totam consectetur praesentium molestiae atque exercitationem ut consequuntur, sed eveniet, magni nostrum sint fuga.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 mb-4">
-        <div class="card h-100">
-          <h4 class="card-header">Card Title</h4>
-          <div class="card-body">
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente esse necessitatibus neque.</p>
-          </div>
-          <div class="card-footer">
-            <a href="#" class="btn btn-primary">Learn More</a>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Portfolio Section -->
-    <h2>Portfolio Heading</h2>
-
-    <div class="row">
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project One</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Amet numquam aspernatur eum quasi sapiente nesciunt? Voluptatibus sit, repellat sequi itaque deserunt, dolores in, nesciunt, illum tempora ex quae? Nihil, dolorem!</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Two</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Three</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quos quisquam, error quod sed cumque, odio distinctio velit nostrum temporibus necessitatibus et facere atque iure perspiciatis mollitia recusandae vero vel quam!</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Four</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Five</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam viverra euismod odio, gravida pellentesque urna varius vitae.</p>
-          </div>
-        </div>
-      </div>
-      <div class="col-lg-4 col-sm-6 portfolio-item">
-        <div class="card h-100">
-          <a href="#"><img class="card-img-top" src="http://placehold.it/700x400" alt=""></a>
-          <div class="card-body">
-            <h4 class="card-title">
-              <a href="#">Project Six</a>
-            </h4>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque earum nostrum suscipit ducimus nihil provident, perferendis rem illo, voluptate atque, sit eius in voluptates, nemo repellat fugiat excepturi! Nemo, esse.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!-- /.row -->
-
-    <!-- Features Section -->
-    <div class="row">
+      <!--weather-->
       <div class="col-lg-6">
-        <h2>Modern Business Features</h2>
-        <p>The Modern Business template by Start Bootstrap includes:</p>
-        <ul>
-          <li>
-            <strong>Bootstrap v4</strong>
+        <div class="shadow bg-white rounded">
+          <img class="img-fluid rounded" src="http://placehold.it/700x500" alt="">
+        </div>  
+      </div>
+      <div class="col-lg-6">
+        <h1 class="text-center">SKI RESORT</h1>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis. Ut morbi tincidunt augue interdum velit euismod. Sed vulputate mi sit amet. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Placerat orci nulla pellentesque dignissim. Viverra mauris in aliquam sem. Nisl suscipit adipiscing bibendum est ultricies integer. At imperdiet dui accumsan sit amet nulla facilisi. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Id consectetur purus ut faucibus pulvinar. Tristique magna sit amet purus gravida quis blandit turpis.</p>
+      </div>      
+    </div>
+    <!-- /.row -->
+    
+    <!-- Calendar and news -->
+    <div class="row mt-2 mt-lg-4">
+      <!-- News --> 
+      <div class="col-lg-6">
+        <h2 class="text-center">NEWS</h2>
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
+
+        <!-- Blog Post -->
+        <div class="card mb-4">
+          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
+          <div class="card-body">
+            <h2 class="card-title">Post Title</h2>
+            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+          </div>
+          <div class="card-footer text-muted">
+            Posted on January 1, 2017 by
+            <a href="#">Start Bootstrap</a>
+          </div>
+        </div>
+
+        <!-- Pagination -->
+        <ul class="pagination justify-content-center mb-4">
+          <li class="page-item">
+            <a class="page-link" href="#">&larr; Older</a>
           </li>
-          <li>jQuery</li>
-          <li>Font Awesome</li>
-          <li>Working contact form with validation</li>
-          <li>Unstyled page elements for easy customization</li>
+          <li class="page-item disabled">
+            <a class="page-link" href="#">Newer &rarr;</a>
+          </li>
         </ul>
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Corporis, omnis doloremque non cum id reprehenderit, quisquam totam aspernatur tempora minima unde aliquid ea culpa sunt. Reiciendis quia dolorum ducimus unde.</p>
+
       </div>
-      <div class="col-lg-6">
-        <img class="img-fluid rounded" src="http://placehold.it/700x450" alt="">
+      <!-- Calendar-->
+      <div class="col-lg-6 container py-5">
+
+        <div id="calendar-events" class="monthly"></div>
+
+        <!--div class="calendar shadow bg-white p-5 rounded">
+          <div class="d-flex align-items-center"><i class="fa fa-calendar fa-3x mr-3"></i>
+            <h2 class="month font-weight-bold mb-0 text-uppercase">December 2019</h2>
+          </div>
+          <p class="font-italic text-muted mb-5">No events for this day.</p>
+          <ol class="day-names list-unstyled">
+            <li class="font-weight-bold text-uppercase">Sun</li>
+            <li class="font-weight-bold text-uppercase">Mon</li>
+            <li class="font-weight-bold text-uppercase">Tue</li>
+            <li class="font-weight-bold text-uppercase">Wed</li>
+            <li class="font-weight-bold text-uppercase">Thu</li>
+            <li class="font-weight-bold text-uppercase">Fri</li>
+            <li class="font-weight-bold text-uppercase">Sat</li>
+          </ol>
+      
+          <ol class="days list-unstyled">
+            <li>
+              <div class="date">1</div>
+              <div class="event bg-success">Event with Long Name</div>
+            </li>
+            <li>
+              <div class="date">2</div>
+            </li>
+            <li>
+              <div class="date">3</div>
+            </li>
+            <li>
+              <div class="date">4</div>
+            </li>
+            <li>
+              <div class="date">5</div>
+            </li>
+            <li>
+              <div class="date">6</div>
+            </li>
+            <li>
+              <div class="date">7</div>
+            </li>
+            <li>
+              <div class="date">8</div>
+            </li>
+            <li>
+              <div class="date">9</div>
+            </li>
+            <li>
+              <div class="date">10</div>
+            </li>
+            <li>
+              <div class="date">11</div>
+            </li>
+            <li>
+              <div class="date">12</div>
+            </li>
+            <li>
+              <div class="date">13</div>
+              <div class="event all-day begin span-2 bg-warning">Event Name</div>
+            </li>
+            <li>
+              <div class="date">14</div>
+            </li>
+            <li>
+              <div class="date">15</div>
+              <div class="event all-day end bg-success">Event Name</div>
+            </li>
+            <li>
+              <div class="date">16</div>
+            </li>
+            <li>
+              <div class="date">17</div>
+            </li>
+            <li>
+              <div class="date">18</div>
+            </li>
+            <li>
+              <div class="date">19</div>
+            </li>
+            <li>
+              <div class="date">20</div>
+            </li>
+            <li>
+              <div class="date">21</div>
+              <div class="event bg-primary">Event Name</div>
+              <div class="event bg-success">Event Name</div>
+            </li>
+            <li>
+              <div class="date">22</div>
+              <div class="event bg-info">Event with Longer Name</div>
+            </li>
+            <li>
+              <div class="date">23</div>
+            </li>
+            <li>
+              <div class="date">24</div>
+            </li>
+            <li>
+              <div class="date">25</div>
+            </li>
+            <li>
+              <div class="date">26</div>
+            </li>
+            <li>
+              <div class="date">27</div>
+            </li>
+            <li>
+              <div class="date">28</div>
+            </li>
+            <li>
+              <div class="date">29</div>
+            </li>
+            <li>
+              <div class="date">30</div>
+            </li>
+            <li>
+              <div class="date">31</div>
+            </li>
+            <li class="outside">
+              <div class="date">1</div>
+            </li>
+            <li class="outside">
+              <div class="date">2</div>
+            </li>
+            <li class="outside">
+              <div class="date">3</div>
+            </li>
+            <li class="outside">
+              <div class="date">4</div>
+            </li>
+          </ol>
+        </div>
+      </div-->
+      
       </div>
     </div>
-    <!-- /.row -->
 
     <hr>
 
     <!-- Call to Action Section -->
     <div class="row mb-4">
       <div class="col-md-8">
-        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Molestias, expedita, saepe, vero rerum deleniti beatae veniam harum neque nemo praesentium cum alias asperiores commodi.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
       <div class="col-md-4">
         <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
@@ -241,8 +317,10 @@
   <!-- Bootstrap core JavaScript -->
   <script src="vendor/jquery/jquery.min.js"></script>
   <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="vendor/monthly/js/monthly.js"></script>
   <!-- Custom js -->
   <script src="js/navigation.js"></script>
+  <script src="js/calendar.js"></script>
 </body>
 
 </html>
