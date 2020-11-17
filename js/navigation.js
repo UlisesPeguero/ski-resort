@@ -7,17 +7,7 @@ var navigation = {
 };
 
 $(function() {
-    var navbar = $('.navbar');
-    navbar.addClass('fixed-top navbar-expand-lg navbar-dark bg-dark fixed-top');
-    navbar.empty();
-    navbar.append('<div class="container">' + 
-                    '<a class="navbar-brand" href="index.html"><img src="img/logo.jpg" alt="Ski Resort\'s Logo"></a>' +
-                        '<button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">' + 
-                            '<span class="navbar-toggler-icon"></span>' + 
-                        '</button>' + 
-                        '<div class="collapse navbar-collapse" id="navbarResponsive">' +
-                        '<ul class="navbar-nav ml-auto">');
-    navbar = $('#navbarResponsive > ul.navbar-nav');
+    var navbar = $('#navbarResponsive > ul.navbar-nav');
     // loop thru navigation object
     for(var name in navigation) {
         var li = $('<li>');

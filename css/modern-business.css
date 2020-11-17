@@ -20,3 +20,12 @@ body {
 .portfolio-item {
   margin-bottom: 30px;
 }
+
+/* Starts Navigation */
+
+.navbar-brand {
+  max-width: 50px;
+  min-width: 50px;
+}
+
+/* Ends Navigation */
