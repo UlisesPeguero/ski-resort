@@ -86,6 +86,9 @@ $(function() {
         $('#weather-uv').append('<strong>' + data.uvi);
         $('#weather-dew').append('<strong>' + Math.round(data.dew_point) + '</strong>°F');
         $('#weather-visibility').append('<strong>' + data.visibility/1000 + '</strong>Miles');
+        // switch spinner with information
+        $('.weather-spinner').hide();
+        $('#weather-container').show();
     });
 
     // initialize monthly plugin
