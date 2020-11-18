@@ -29,6 +29,13 @@ $(function() {
                                 data.weather[0].description.charAt(0).toUpperCase() + 
                                 data.weather[0].description.slice(1));
         $('#weather-wind-speed').append(data.wind_speed);
-
+        $('#weather-wind-direction').css({
+            transform: 'rotate(' + data.wind_deg + 'deg)'
+        });
+        $('#weather-pressure').append(data.pressure + 'hPa');
+        $('#weather-humidity').append(data.humidity + '%');
+        $('#weather-uv').append(data.uvi);
+        $('#weather-dew').append(data.dew_point + '°F');
+        $('#weather-visibility').append(data.visibility/1000 + 'Miles');
     });
 });
