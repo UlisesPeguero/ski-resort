@@ -14,8 +14,8 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-  <!-- Custom for weather -->
-  <link href="css/weather.css" rel="stylesheet">
+  <!-- Custom for index -->
+  <link href="css/index.css" rel="stylesheet">
   <!-- Custom for calendar -->
   <link href="vendor/monthly/css/monthly.css" rel="stylesheet">
 </head>
@@ -148,77 +148,77 @@
     <div class="row mt-2 mt-lg-4">
 
       <!-- Calendar-->
-      <div class="col-sm-6">        
+      <div class="col-sm-6 py-sm-1 py-lg-4">        
         <div id="calendar-events" class="monthly"></div>
       </div>
       <!-- News --> 
       <div class="col-sm-6">
-        <h2 class="text-center">NEWS</h2>
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+        <h2 class="text-center">NEWS</h2>    
+        <div class="news-list">   
+          <div class="card mb-4 news-item active" data="0">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 17, 2020
+            </div>
+          </div>    
+          <div class="card mb-4 news-item" data="1">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title older</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 10, 2020             
+            </div>
           </div>
-          <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
-            <a href="#">Start Bootstrap</a>
-          </div>
-        </div>
-
-        <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
-            <a href="#">Start Bootstrap</a>
-          </div>
-        </div>
-
-        <!-- Blog Post -->
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/600x250" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-            Posted on January 1, 2017 by
-            <a href="#">Start Bootstrap</a>
-          </div>
-        </div>
-
+          <div class="card mb-4 news-item" data="2">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title even older</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 1, 2020             
+            </div>
+          </div>        
+        </div>  
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
-            <a class="page-link" href="#">&larr; Older</a>
+          <li class="page-item old">
+            <a id="btn-oldest-news" class="page-link" href="">&#8676;</a>
           </li>
-          <li class="page-item disabled">
-            <a class="page-link" href="#">Newer &rarr;</a>
+          <li class="page-item old">
+            <a id="btn-older-news" class="page-link" href="">&larr; Older</a>
+          </li>
+          <li class="page-item disabled new">
+            <a id="btn-newer-news" class="page-link" href="">Newer &rarr;</a>
+          </li>
+          <li class="page-item disabled new">
+            <a id="btn-newest-news" class="page-link" href="">&#8677;</a>
           </li>
         </ul>
 
       </div>  
     </div>
 
-    <hr>
+    <!--hr-->
 
     <!-- Call to Action Section -->
-    <div class="row mb-4">
+    <!--div class="row mb-4">
       <div class="col-md-8">
         <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
       </div>
       <div class="col-md-4">
         <a class="btn btn-lg btn-secondary btn-block" href="#">Call to Action</a>
       </div>
-    </div>
+    </div-->
 
   </div>
   <!-- /.container -->
@@ -237,8 +237,7 @@
   <script src="vendor/monthly/js/monthly.js"></script>
   <!-- Custom js -->
   <script src="js/navigation.js"></script>
-  <script src="js/weather.js"></script>
-  <script src="js/calendar.js"></script>
+  <script src="js/index.js"></script>  
 </body>
 
 </html>

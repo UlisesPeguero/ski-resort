@@ -1,3 +1,4 @@
+/* START Weather */
 
 .weather-items {
     padding-left: 0;
@@ -37,3 +38,15 @@
     font-weight: bold;
     
 }
+/* ENDS Weather */
+
+/* STARTS News Feed */
+.news-item {
+    display:none;
+    transition: ease 0.3s;
+}
+
+.news-item.active {
+    display: flex;
+}
+/* ENDS News Feed */
