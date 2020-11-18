@@ -1,0 +1,39 @@
+
+.weather-items {
+    padding-left: 0;
+    list-style: none;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    line-height: 20px;
+}
+
+.weather-items li {
+    margin-right: 16pt;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+}
+
+.icon-wind-direction {
+	height: 8pt;
+}
+
+.icon-pressure {
+	height: 12pt;
+	width: auto;
+}
+
+.weather-icon-temp {
+    display: flex;
+    justify-content: center; 
+    align-items: center;
+    margin-top: 16pt; 
+    margin-bottom: 16pt;
+}
+
+#weather-temperature {
+    font-size: 36px;
+    font-weight: bold;
+    
+}
