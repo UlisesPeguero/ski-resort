@@ -21,13 +21,28 @@ body {
   margin-bottom: 30px;
 }
 
+.primary-text {
+  color: #0077B6 !important;
+}
+
+.primary-bg {
+  background-color: #0077B6 !important;
+}
 
 
 /* Starts Navigation */
+.navbar,
+footer.bg-dark {
+  background-color: #0077B6 !important;
+  color: #FFFFFF;
+}
+
 
 .navbar-brand {
   max-width: 50px;
   min-width: 50px;
 }
+
+
 
 /* Ends Navigation */
