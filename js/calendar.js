@@ -8,7 +8,7 @@ var events =
             "enddate": "2020-11-18",
             "starttime": "12:00",
             "endtime": "14:00",
-            "color": "#DDDDDD",
+            "class": "bg-primary",
             "url": ""
         }, {
             "id": 2,
@@ -17,9 +17,28 @@ var events =
             "enddate": "",
             "starttime": "14:00",
             "endtime": "16:00",
-            "color": "#BBBBBB",
+            "class": "bg-success",
+            "url": ""
+        }, {
+            "id": 3,
+            "name": "Snowboard competition",
+            "startdate": "2020-11-22",
+            "enddate": "",
+            "starttime": "11:00",
+            "endtime": "15:00",
+            "class": "bg-secondaryt",
+            "url": ""
+        }, {
+            "id": 4,
+            "name": "Ski classes",
+            "startdate": "2020-11-01",
+            "enddate": "2020-11-30",
+            "starttime": "10:00",
+            "endtime": "12:00",
+            "class": "bg-info",
             "url": ""
         }
+        
     ]
 };
 

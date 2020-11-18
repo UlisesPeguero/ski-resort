@@ -28,7 +28,7 @@ $(function() {
                                 data.feels_like + '°F. ' + 
                                 data.weather[0].description.charAt(0).toUpperCase() + 
                                 data.weather[0].description.slice(1));
-        $('#weather-wind-speed').append(data.wind_speed);
+        $('#weather-wind-speed').append(data.wind_speed + 'mph');
         $('#weather-wind-direction').css({
             transform: 'rotate(' + data.wind_deg + 'deg)'
         });
