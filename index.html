@@ -25,8 +25,9 @@
   <!-- Navigation -->
   <nav class="navbar fixed-top navbar-expand-lg  navbar-dark fixed-top">
     <div class="container">
-      <a class="navbar-brand" href="index.html">
+      <a class="navbar-brand mb-0 h1" href="index.html">
         <img src="img/logo.png" alt="Blue Spruce's Logo" class="img-fluid">
+        <span class="d-none d-sm-inline-block">Blue Spruce Lodge</span>
       </a>
       <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -86,7 +87,12 @@
     <div class="row">
       <!--weather-->
       <div class="col-sm-6">
-        <div id="weather-container" class="container-fluid bg-white shadow py-1 rounded">
+        <!-- Spinner -->
+        <div class="spinner-border primary-text weather-spinner" role="status">
+          <span class="sr-only">Loading...</span>
+        </div>
+        <!-- Weather info -->
+        <div id="weather-container" class="container-fluid bg-white shadow py-3 rounded" style="display: none">
           <div>
             <span id="weather-time-date" class="primary-text"></span>
             <h2 id="weather-location" class="mt-0"></h2></div>
@@ -138,8 +144,8 @@
         </div>
       </div>
       <div class="col-sm-6">
-        <h1 class="text-center">BLUE SPRUCE LODGE</h1>        
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis. Ut morbi tincidunt augue interdum velit euismod. Sed vulputate mi sit amet. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Placerat orci nulla pellentesque dignissim. Viverra mauris in aliquam sem. Nisl suscipit adipiscing bibendum est ultricies integer. At imperdiet dui accumsan sit amet nulla facilisi. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Id consectetur purus ut faucibus pulvinar. Tristique magna sit amet purus gravida quis blandit turpis. Mauris cursus mattis molestie a iaculis at erat pellentesque adipiscing.</p>       
+        <h1 class="text-center">Welcome</h1>        
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Cum sociis natoque penatibus et magnis dis. Ut morbi tincidunt augue interdum velit euismod. Sed vulputate mi sit amet. Fermentum et sollicitudin ac orci phasellus egestas tellus rutrum tellus. Placerat orci nulla pellentesque dignissim. Viverra mauris in aliquam sem. Nisl suscipit adipiscing bibendum est ultricies integer. At imperdiet dui accumsan sit amet nulla facilisi. Viverra maecenas accumsan lacus vel facilisis volutpat est velit egestas. Id consectetur purus ut faucibus pulvinar.</p>       
       </div>            
     </div>
     <!-- /.row -->
@@ -149,14 +155,15 @@
 
       <!-- Calendar-->
       <div class="col-sm-6 py-sm-1 py-lg-4">        
+        <h2 class="text-center">Events</h2>
         <div id="calendar-events" class="monthly"></div>
       </div>
       <!-- News --> 
       <div class="col-sm-6">
-        <h2 class="text-center">NEWS</h2>    
+        <h2 class="text-center">News</h2>    
         <div class="news-list">   
-          <div class="card mb-4 news-item active" data="0">
-            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+          <div class="card mb-2 news-item active" data="0">
+            <img class="card-img-top" src="http://placehold.it/500x200" alt="Card image cap">
             <div class="card-body">
               <h2 class="card-title">Post Title</h2>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
@@ -166,8 +173,8 @@
               Posted on November 17, 2020
             </div>
           </div>    
-          <div class="card mb-4 news-item" data="1">
-            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+          <div class="card mb-2 news-item" data="1">
+            <img class="card-img-top" src="http://placehold.it/500x200" alt="Card image cap">
             <div class="card-body">
               <h2 class="card-title">Post Title older</h2>
               <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
@@ -177,7 +184,7 @@
               Posted on November 10, 2020             
             </div>
           </div>
-          <div class="card mb-4 news-item" data="2">
+          <div class="card mb-2 news-item" data="2">
             <img class="card-img-top" src="https://www.nsaa.org//App_Themes/NSAA_20.2.65/images/nsaa/hd_Logo.svg" alt="Card image cap">
             <div class="card-body">
               <h2 class="card-title">NSAA Commitment</h2>
@@ -195,10 +202,10 @@
             <a id="btn-oldest-news" class="page-link" href="">&#8676;</a>
           </li>
           <li class="page-item old">
-            <a id="btn-older-news" class="page-link" href="">&larr; Older</a>
+            <a id="btn-older-news" class="page-link" href="">&larr; <span class="d-none d-lg-inline-block">Older</span> </a>
           </li>
           <li class="page-item disabled new">
-            <a id="btn-newer-news" class="page-link" href="">Newer &rarr;</a>
+            <a id="btn-newer-news" class="page-link" href=""><span class="d-none d-lg-inline-block">Newer</span> &rarr;</a>
           </li>
           <li class="page-item disabled new">
             <a id="btn-newest-news" class="page-link" href="">&#8677;</a>
