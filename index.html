@@ -14,8 +14,8 @@
   <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
   <!-- Custom styles for this template -->
   <link href="css/modern-business.css" rel="stylesheet">
-  <!-- Custom for weather -->
-  <link href="css/weather.css" rel="stylesheet">
+  <!-- Custom for index -->
+  <link href="css/index.css" rel="stylesheet">
   <!-- Custom for calendar -->
   <link href="vendor/monthly/css/monthly.css" rel="stylesheet">
 </head>
@@ -153,38 +153,55 @@
       </div>
       <!-- News --> 
       <div class="col-sm-6">
-
-        <h2 class="text-center">NEWS</h2>       
-        <div class="card mb-4">
-          <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Post Title</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="#" class="btn btn-primary">Read More &rarr;</a>
+        <h2 class="text-center">NEWS</h2>    
+        <div class="news-list">   
+          <div class="card mb-4 news-item active" data="0">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="#" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 17, 2020
+            </div>
+          </div>    
+          <div class="card mb-4 news-item" data="1">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title older</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 10, 2020             
+            </div>
           </div>
-          <div class="card-footer text-muted">
-            Posted on November 175, 2020
-          </div>
-        </div>    
-        <div class="card mb-4" style="display: none;">
-          <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
-          <div class="card-body">
-            <h2 class="card-title">Post Title older</h2>
-            <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
-            <a href="" class="btn btn-primary">Read More &rarr;</a>
-          </div>
-          <div class="card-footer text-muted">
-            Posted on November 10, 2020             
-          </div>
-        </div>        
-
+          <div class="card mb-4 news-item" data="2">
+            <img class="card-img-top" src="http://placehold.it/500x150" alt="Card image cap">
+            <div class="card-body">
+              <h2 class="card-title">Post Title even older</h2>
+              <p class="card-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Reiciendis aliquid atque, nulla? Quos cum ex quis soluta, a laboriosam. Dicta expedita corporis animi vero voluptate voluptatibus possimus, veniam magni quis!</p>
+              <a href="" class="btn btn-primary">Read More &rarr;</a>
+            </div>
+            <div class="card-footer text-muted">
+              Posted on November 1, 2020             
+            </div>
+          </div>        
+        </div>  
         <!-- Pagination -->
         <ul class="pagination justify-content-center mb-4">
-          <li class="page-item">
+          <li class="page-item old">
+            <a id="btn-oldest-news" class="page-link" href="">&#8676;</a>
+          </li>
+          <li class="page-item old">
             <a id="btn-older-news" class="page-link" href="">&larr; Older</a>
           </li>
-          <li class="page-item disabled">
+          <li class="page-item disabled new">
             <a id="btn-newer-news" class="page-link" href="">Newer &rarr;</a>
+          </li>
+          <li class="page-item disabled new">
+            <a id="btn-newest-news" class="page-link" href="">&#8677;</a>
           </li>
         </ul>
 

@@ -47,6 +47,7 @@ var events =
 $(function() {
     // call openweather api
     var now = new Date();
+    // get the moment of the api request
     $('#weather-time-date').html(
         new Intl.DateTimeFormat('en-US', {
             year: 'numeric',
@@ -55,6 +56,7 @@ $(function() {
             hour: 'numeric',
             minute: 'numeric'
         } ).format(now));
+    // make ajax.get request for Denver, Colorado
     $.get({
         url: 'https://api.openweathermap.org/data/2.5/onecall?lat=39.74&lon=-104.98',
         data: {
@@ -66,6 +68,7 @@ $(function() {
         },
         dataType: 'JSON'        
     }).done(function(data) {
+        // parse success data into weather layout
         data = data.current;
         $('#weather-location').text("Denver, Colorado");
         $('#weather-temperature').text(Math.round(data.temp) + '°F');
@@ -90,5 +93,45 @@ $(function() {
         mode: 'event',
         dataType: 'json',
         events: events
+    });
+
+    // news feed control
+    var activeIndex = 0;
+    var newsCount = $('.news-item').length;
+
+    function setActiveNews(index, btn, evt) {
+        if(index > newsCount - 1) {
+            index = newsCount - 1;
+        } else if(index < 0) {
+            index = 0;
+        }
+        activeIndex = index;
+        // remove focus from button
+        btn.blur();
+        // prevent <a> to refresh the page
+        evt.preventDefault();
+        // update the classes 
+        $('.news-item').removeClass('active');
+        $('.news-item[data=' + index + ']').addClass('active');        
+        if(index === newsCount - 1) {
+            $('.page-item.old').addClass('disabled');
+            $('.page-item.new').removeClass('disabled');
+        } else if(index === 0) {
+            $('.page-item.old').removeClass('disabled');
+            $('.page-item.new').addClass('disabled');
+        }
+    }
+
+    $('#btn-oldest-news').click(function(evt) {
+        setActiveNews(newsCount - 1, $(this), evt);        
+    });  
+    $('#btn-newest-news').click(function(evt) {
+        setActiveNews(0, $(this), evt);       
+    });  
+    $('#btn-older-news').click(function(evt) {
+        setActiveNews(activeIndex + 1, $(this), evt);        
+    });
+    $('#btn-newer-news').click(function(evt) {
+        setActiveNews(activeIndex - 1, $(this), evt);        
     });
 });
