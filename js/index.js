@@ -9,7 +9,7 @@ var events =
             "enddate": "2020-11-18",
             "starttime": "12:00",
             "endtime": "14:00",
-            "class": "bg-primary",
+            "class": "event-0",
             "url": ""
         }, {
             "id": 2,
@@ -18,7 +18,7 @@ var events =
             "enddate": "",
             "starttime": "14:00",
             "endtime": "16:00",
-            "class": "bg-success",
+            "class": "event-1",
             "url": ""
         }, {
             "id": 3,
@@ -27,7 +27,7 @@ var events =
             "enddate": "",
             "starttime": "11:00",
             "endtime": "15:00",
-            "class": "bg-secondaryt",
+            "class": "event-2",
             "url": ""
         }, {
             "id": 4,
@@ -36,7 +36,7 @@ var events =
             "enddate": "2020-11-30",
             "starttime": "10:00",
             "endtime": "12:00",
-            "class": "bg-info",
+            "class": "event-3",
             "url": ""
         }
         
@@ -122,6 +122,9 @@ $(function() {
         } else if(index === 0) {
             $('.page-item.old').removeClass('disabled');
             $('.page-item.new').addClass('disabled');
+        } else {
+            $('.page-item.old').removeClass('disabled');
+            $('.page-item.new').removeClass('disabled');
         }
     }
 
