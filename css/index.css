@@ -61,3 +61,21 @@
     display: flex;
 }
 /* ENDS News Feed */
+
+/* STARTS Events */
+.event-0 {
+    background-color: #0074D9 !important;
+}
+
+.event-1 {
+    background-color: #3D9970 !important;
+}
+
+.event-2 {
+    background-color: #39CCCC !important;
+}
+
+.event-3 {
+    background-color: #7FDBFF !important;
+}
+/* ENDS Events */
