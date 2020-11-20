@@ -5,6 +5,10 @@
  */
 body {
   padding-top: 56px;
+  background-color: #f2f2f2;
+  font-family: "Old Standard TT", Helvetica;
+  text-align: justify;
+  font-size: 18px;
 }
 
 .carousel-item {
@@ -43,6 +47,38 @@ footer.bg-dark {
   min-width: 50px;
 }
 
-
-
 /* Ends Navigation */
+
+/* STARTS Text */
+
+h1, h2, h3 {
+  font-family: Cabin, Arial;
+  text-align: center;
+}
+
+/* ENDS Text */
+
+/* STARTS Buttons */
+.btn-primary {
+  background-color: #03045e !important;
+  border:0;
+}
+
+.page-item a.page-link {
+  background-color: #03045e !important;
+  color: #ffff;
+}
+
+/* ENDS Buttons */
+
+/* STARTS Card */
+
+/* ENDS Card */
+
+.shadow-sharp {
+  box-shadow: 0 2px 2px rgba(0,0,0,0.25), 
+            0 4px 4px rgba(0,0,0,0.20), 
+            0 8px 8px rgba(0,0,0,0.15), 
+            0 16px 16px rgba(0,0,0,0.10),
+            0 32px 32px rgba(0,0,0,0.05);
+}
