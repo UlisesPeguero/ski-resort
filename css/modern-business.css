@@ -124,3 +124,11 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 /* ENDS special effects */
+
+/* STARTS News */
+.post-date {
+  border-bottom: 1px solid lightgray;
+  text-align: left;
+  font-size: 15px;
+}
+/* ENDS News */
