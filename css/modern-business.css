@@ -51,7 +51,7 @@ footer.bg-dark {
 
 /* STARTS Text */
 
-h1, h2, h3 {
+h1, h2, h3, h4, h5, h6 {
   font-family: Cabin, Arial;
   text-align: center;
 }
@@ -59,6 +59,8 @@ h1, h2, h3 {
 /* ENDS Text */
 
 /* STARTS Buttons */
+
+
 .btn-primary {
   background-color: #03045e !important;
   border:0;
@@ -68,6 +70,10 @@ h1, h2, h3 {
   background-color: #03045e !important;
   color: #ffff;
 }
+
+@media all and (max-width:480px) {
+  #btn-send-message { width: 100%; display:block; }
+}   
 
 /* ENDS Buttons */
 

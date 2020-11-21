@@ -44,11 +44,11 @@
   </nav>
 
   <header>
-    <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <div id="carouselHome" class="carousel slide" data-ride="carousel">
       <ol class="carousel-indicators">
-        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
-        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+        <li data-target="#carouselHome" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselHome" data-slide-to="1"></li>
+        <li data-target="#carouselHome" data-slide-to="2"></li>
       </ol>
       <div class="carousel-inner" role="listbox">
         <!-- Slide One - Set the background image for this slide in the line below -->
@@ -73,11 +73,11 @@
           </div>
         </div>
       </div>
-      <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+      <a class="carousel-control-prev" href="#carouselHome" role="button" data-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="sr-only">Previous</span>
       </a>
-      <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+      <a class="carousel-control-next" href="#carouselHome" role="button" data-slide="next">
         <span class="carousel-control-next-icon" aria-hidden="true"></span>
         <span class="sr-only">Next</span>
       </a>
@@ -102,13 +102,14 @@
             <h2 id="weather-location" class="mt-0"></h2></div>
           <div class="weather-icon-temp">
             <img id="weather-icon" src="" alt="weather-icon" class="weather-icon" style="margin-left: -10px;">
-            <span id="weather-temperature" class="heading"></span>
+            <strong id="weather-temperature" class="heading"></strong>
           </div>
-          <div>
-            <span id="weather-feel" style="font-weight: bold;"></span>
+          <div class="text-center">
+            <strong id="weather-feel"></strong>
           </div>
+          <br>
           <ul class="weather-items">
-            <!---->
+            <!--weather extra details-->
             <li>
               <div id="weather-wind-speed" class="wind-line">
                 <svg id="weather-wind-direction" viewBox="0 0 1000 1000" enable-background="new 0 0 1000 1000" xml:space="preserve" class="icon-wind-direction" style="transform: rotate(240deg);">

@@ -1,50 +1,35 @@
-// fake list of events
-var events =
-{
-    "monthly": [
-        {
-            "id": 1,
-            "name": "Ski for kids",
-            "startdate": "2020-11-15",
-            "enddate": "2020-11-18",
-            "starttime": "12:00",
-            "endtime": "14:00",
-            "class": "event-0",
-            "url": ""
-        }, {
-            "id": 2,
-            "name": "Sleight race",
-            "startdate": "2020-11-17",
-            "enddate": "",
-            "starttime": "14:00",
-            "endtime": "16:00",
-            "class": "event-1",
-            "url": ""
-        }, {
-            "id": 3,
-            "name": "Snowboard competition",
-            "startdate": "2020-11-22",
-            "enddate": "",
-            "starttime": "11:00",
-            "endtime": "15:00",
-            "class": "event-2",
-            "url": ""
-        }, {
-            "id": 4,
-            "name": "Ski classes",
-            "startdate": "2020-11-01",
-            "enddate": "2020-11-30",
-            "starttime": "10:00",
-            "endtime": "12:00",
-            "class": "event-3",
-            "url": ""
+
+$(function() {    
+
+    // determinate cardinal wind direction
+    function cardinalWindDirection(deg) {
+        // (deg < value ) = key
+        var cardinalDirections = {
+            N: 11.25,
+            NNE: 33.75,
+            NE: 56.25,
+            ENE: 78.75,
+            E: 101.25,
+            ESE: 123.75,
+            SE: 146.25,
+            SSE: 168.75,
+            S: 191.25,
+            SSW: 213.75,
+            SW: 236.25,
+            WSW: 258.75,
+            W: 281.25,
+            WNW: 303.75,
+            NW: 326.25,
+            NNW: 348.75
+        };
+        for(var key in cardinalDirections) {
+            if(deg < cardinalDirections[key]) {                
+                return key;
+            }
         }
-        
-    ]
-};
-
-
-$(function() {
+        // N >= 348.75  < 11.25
+        return 'N';
+    }
     // call openweather api
     var now = new Date();
     // get the moment of the api request
@@ -77,9 +62,9 @@ $(function() {
                                 data.feels_like + '°F. ' + 
                                 data.weather[0].description.charAt(0).toUpperCase() + 
                                 data.weather[0].description.slice(1));
-        $('#weather-wind-speed').append('<strong>' + data.wind_speed + '</strong>mph');
+        $('#weather-wind-speed').append('<strong>' + data.wind_speed + '</strong>mph' + ' <strong>' + cardinalWindDirection(data.wind_deg) + '</strong>');
         $('#weather-wind-direction').css({
-            transform: 'rotate(' + data.wind_deg + 'deg)'
+            transform: 'rotate(' + (270 - data.wind_deg) + 'deg)'
         });
         $('#weather-pressure').append('<strong>' + data.pressure + '</strong>hPa');
         $('#weather-humidity').append('<strong>' + data.humidity + '</strong>%');
@@ -91,6 +76,51 @@ $(function() {
         $('#weather-container').show();
     });
 
+
+    // fake list of events
+    var events =
+    {
+        "monthly": [
+            {
+                "id": 1,
+                "name": "Ski for kids",
+                "startdate": "2020-11-15",
+                "enddate": "2020-11-18",
+                "starttime": "12:00",
+                "endtime": "14:00",
+                "class": "event-0",
+                "url": ""
+            }, {
+                "id": 2,
+                "name": "Sleight race",
+                "startdate": "2020-11-17",
+                "enddate": "",
+                "starttime": "14:00",
+                "endtime": "16:00",
+                "class": "event-1",
+                "url": ""
+            }, {
+                "id": 3,
+                "name": "Snowboard competition",
+                "startdate": "2020-11-22",
+                "enddate": "",
+                "starttime": "11:00",
+                "endtime": "15:00",
+                "class": "event-2",
+                "url": ""
+            }, {
+                "id": 4,
+                "name": "Ski classes",
+                "startdate": "2020-11-01",
+                "enddate": "2020-11-30",
+                "starttime": "10:00",
+                "endtime": "12:00",
+                "class": "event-3",
+                "url": ""
+            }
+            
+        ]
+    };
     // initialize monthly plugin
     $('#calendar-events').monthly({
         mode: 'event',
