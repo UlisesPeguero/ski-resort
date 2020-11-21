@@ -7,6 +7,10 @@
     font-family: Cabin, Arial;
 }
 
+#weather-time {
+    font-size: 15px;
+}
+
 .weather-items {
     padding-left: 0;
     list-style: none;
@@ -64,6 +68,15 @@
 .news-item.active {
     display: flex;
 }
+
+#btn-newest-news {
+    border-radius: 0 0.25rem 0.25rem 0;    
+}
+
+#btn-oldest-news {
+    border-radius: 0.25rem 0 0 0.25rem;    
+}
+
 /* ENDS News Feed */
 
 /* STARTS Events */

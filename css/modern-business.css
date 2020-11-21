@@ -35,6 +35,10 @@ body {
 
 
 /* Starts Navigation */
+.navbar {
+  font-family: Cabin, Arial;
+}
+
 .navbar,
 footer.bg-dark {
   background-color: #0077B6 !important;
@@ -42,7 +46,7 @@ footer.bg-dark {
 }
 
 
-.navbar-brand {
+.navbar-brand img {
   max-width: 50px;
   min-width: 50px;
 }
@@ -59,20 +63,33 @@ h1, h2, h3, h4, h5, h6 {
 /* ENDS Text */
 
 /* STARTS Buttons */
+.btn-primary,
+.page-item a.page-link {
+  background: linear-gradient(to bottom, #03045ecc, #03045e) !important;
+  color: #fff;
+  font-family: Cabin, Arial;
+}
 
+.btn-primary:hover,
+.page-item a.page-link:hover {
+  background:linear-gradient(to bottom, #0077B6cc, #0077B6) !important;
+} 
 
 .btn-primary {
-  background-color: #03045e !important;
-  border:0;
+  border: 0;
 }
 
 .page-item a.page-link {
-  background-color: #03045e !important;
   color: #ffff;
+  border: none;
 }
 
+/* Makes the button on Contact go full width when small break */
 @media all and (max-width:480px) {
-  #btn-send-message { width: 100%; display:block; }
+  #btn-send-message { 
+    width: 100%; 
+    display:block; 
+  }
 }   
 
 /* ENDS Buttons */
@@ -91,6 +108,9 @@ h1, h2, h3, h4, h5, h6 {
   text-align:justify;
 }
 
+.card-footer {
+  font-size: 15px;
+}
 /* ENDS Card */
 
 /* STARTS special effects */
