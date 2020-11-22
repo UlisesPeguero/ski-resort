@@ -42,6 +42,7 @@ $(function() {
             minute: 'numeric'
         } ).format(now));
     // make ajax.get request for Denver, Colorado
+    /*
     $.get({
         url: 'https://api.openweathermap.org/data/2.5/onecall?lat=39.74&lon=-104.98',
         data: {
@@ -49,7 +50,7 @@ $(function() {
             lon: -104.98,
             exclude: 'daily,minutely,hourly',
             units:'imperial',
-            appid: '74070c0135be6c40c7665b1a5ecd1f31'
+            appid: ''
         },
         dataType: 'JSON'        
     }).done(function(data) {
@@ -75,7 +76,7 @@ $(function() {
         $('.weather-spinner').hide();
         $('#weather-container').show();
     });
-
+    */
 
     // fake list of events
     var events =
