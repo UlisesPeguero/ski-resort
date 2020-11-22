@@ -1,5 +1,5 @@
 var navigation = {
-    'Home': './index.html',
+    'Home': './',
     'About': './about.html',
     'Amenities': './amenities.html',
     'Safety': './safety.html',
