@@ -1,6 +1,5 @@
 
 $(function() {    
-
     // determinate cardinal wind direction
     function cardinalWindDirection(deg) {
         // (deg < value ) = key
@@ -41,21 +40,9 @@ $(function() {
             hour: 'numeric',
             minute: 'numeric'
         } ).format(now));
-    // make ajax.get request for Denver, Colorado    
-    $.get({
-        url: 'https://api.openweathermap.org/data/2.5/onecall?lat=39.74&lon=-104.98',
-        data: {
-            lat: 39.74,
-            lon: -104.98,
-            exclude: 'daily,minutely,hourly',
-            units:'imperial',
-            appid: 'apiKey'
-        },
-        dataType: 'JSON'        
-    }).done(function(data) {
-        // parse success data into weather layout
-        data = data.current;
-        $('#weather-location').text("Denver, Colorado");
+    // display weather values
+    function displayWeather(data){
+        $('#weather-location').text("Denver, Colorado");        
         $('#weather-temperature').text(Math.round(data.temp) + '°F');
         $('#weather-icon').attr('src', 'https://openweathermap.org/img/wn/' + data.weather[0].icon + '@2x.png');
         $('#weather-feel').text('Feels like ' + 
@@ -73,7 +60,43 @@ $(function() {
         $('#weather-visibility').append('<strong>' + data.visibility/1000 + '</strong>Miles');
         // switch spinner with information
         $('.weather-spinner').hide();
-        $('#weather-container').show();
+        $('#weather-container').show();    
+    }
+    // make ajax.get request for Denver, Colorado        
+    $.get({
+        url: 'https://api.openweathermap.org/data/2.5/onecall',
+        data: {
+            lat: 39.74,
+            lon: -104.98,
+            exclude: 'daily,minutely,hourly',
+            units:'imperial',
+            appid: 'c51dbc9484cdacaff7e6217b8836e64f'
+        },
+        dataType: 'JSON'        
+    }).done(function(data) {
+        // parse success data into weather layout
+        data = data.current;
+        displayWeather(data);   
+    }).fail(function(event){
+        // send back-up object if the API denies access due GitHub
+        displayWeather({
+            dew_point: 8.51,
+            feels_like: 28.53,
+            Humidity: 25,
+            pressure: 1030,
+            temp: 38.46,
+            uvi: 2.31,
+            visibility: 10000,
+            weather: [
+                {
+                    main: "Clouds", 
+                    description: "few clouds",
+                    icon: "02d"
+                }
+            ],
+            wind_deg: 100,
+            wind_speed: 6.93
+        });
     });    
 
     // fake list of events
