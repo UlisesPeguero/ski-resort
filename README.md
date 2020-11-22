@@ -6,7 +6,7 @@ This website was created as a project for the Skilled KC Technical Institute Sof
 
 # Screenshot
 
-![Blue Spruce Lodge Screenshot](https://github.com/UlisesPeguero/ski-resort/blob/readMe/img/web-preview.png)
+![Blue Spruce Lodge Screenshot](https://github.com/UlisesPeguero/ski-resort/blob/develop/img/web-preview.png)
  
 # Credits
 People who made this website:Rhonda Pemberton, Sydney Ruffin, Ulises Fox Peguero
