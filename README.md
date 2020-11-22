@@ -10,12 +10,9 @@ This website was created as a project for the Skilled KC Technical Institute Sof
  
 # Credits
 People who made this website:Rhonda Pemberton, Sydney Ruffin, Ulises Fox Peguero
-The base template was made by: [Bootstrap Authors]https://startbootstrap.com/template/modern-business
-The calendar was made by: [Kevin Thornbloom]https://github.com/kthornbloom/Monthly
-The weather API was made by: [Open Weather Map]https://openweathermap.org/api
+The base template was made by: [Bootstrap Authors](https://startbootstrap.com/template/modern-business)
+The calendar was made by: [Kevin Thornbloom](https://github.com/kthornbloom/Monthly)
+The weather API was made by: [Open Weather Map](https://openweathermap.org/api)
  
 # License
 MIT © Rhonda Pemberton, Sydney Ruffin, Ulises Fox Peguero
-
-
-
